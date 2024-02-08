@@ -50,7 +50,7 @@ pipeline {
                  steps {
                        script {
  
-                             sh 'rsync -avz $WORKSPACE/target/GreetingApp-0.0.1-SNAPSHOT.jar jenkins@10.0.30.218:/tmp/'
+                             sh 'echo "Add Script to push to production"'
                               }
                         }
                      }
