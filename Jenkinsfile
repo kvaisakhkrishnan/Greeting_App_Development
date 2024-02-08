@@ -6,7 +6,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def mvn = tool 'maven';
+                    def mvn = tool 'Maven';
                     withSonarQubeEnv('SonarQubeServer') {
                         sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=greetings -f pom.xml"
                     }
